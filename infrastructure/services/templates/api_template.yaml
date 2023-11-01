@@ -1,0 +1,46 @@
+openapi: "3.0.1"
+info:
+  title: "service-operations-api"
+  description: "Service Operations apis forwarder"
+  version: "v1"
+
+tags:
+  - name: FAQ
+    description: FAQ search and retrieval
+
+paths:
+  #################################################################
+  # Example endpoint
+  #################################################################
+  /example/endpoint:
+  get:
+    description: "Example Get Endpoint"
+    tags:
+      - "Example"
+    responses:
+      200:
+        description: "Example response"
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ExampleResponse"
+    x-amazon-apigateway-integration:
+      uri: "arn:aws:apigateway:${region}:lambda:path/2015-03-31/functions/${lambda_health_arn}/invocations" # The ARM of the lambda function, update the region and arn accordingly
+      httpMethod: "GET"
+      type: "http"
+      responses:
+        default:
+          statusCode: "200"
+      passthroughBehavior: "when_no_match"
+      timeoutInMillis: 29000 # Timeout
+      requestTemplates:
+        application/json: "{\"statusCode\": 200}"
+components:
+    schemas:
+        ExampleResponse:
+            type: object
+            properties:
+            example:
+                type: string
+                description: "Example response"
+                example: "Example response"

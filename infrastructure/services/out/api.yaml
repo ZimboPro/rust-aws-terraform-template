@@ -1,0 +1,13 @@
+openapi: 3.0.1
+info:
+  title: openapi-example
+  version: 0.3.0
+  description: "<p>This is an example OpenAPI specification document for our identity management solution</p>"
+  termsOfService: "http://example.com/tos"
+  contact:
+    email: "example@example.com"
+servers:
+- url: http://example.com/
+  variables:
+    basePath:
+      default: /v1
