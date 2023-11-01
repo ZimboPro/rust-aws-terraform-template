@@ -43,3 +43,4 @@ Each Lambda requires it's own binary. It is possible to have a single lambda do 
 
  * [AWS Lambda and Rust building AWS Lambda functions](https://medium.com/@jakub.jantosik/aws-lambda-and-rust-building-aws-lambda-functions-with-terraform-pt-1-a09e5c0a0cb9)
  * [Rust, Lambda and DynamoDB](https://betterprogramming.pub/rust-lambda-and-dynamodb-bea841d47cca)
+ * [OpenAPI and Terraform series](https://dev.to/rolfstreefkerk/why-document-a-rest-api-as-code-5e7p)
